@@ -50,5 +50,15 @@ Next drag the Stored Procedure component and drop it on the canvas. Connect the 
 @concat(activity('Web1').output.results[0].confidence)
 
 ![StoredProcedure-1](https://github.com/ujvalgandhi1/GeocodingUsingPipelines/blob/main/images/StoredProcedure-1.PNG)
-![StoredProcedure-1](https://github.com/ujvalgandhi1/GeocodingUsingPipelines/blob/main/images/StoredProcedure-1.PNG)
+
+Then exit the ForEach loop and add a Copy Data component to the canvas and connect the For Each to the Copy Data
+
+For the Source, use the table on the Azure SQL Database that you created using the Create Table Script found under Data Assets
+For the Use Query, use "Stored Procedure" and select the usp_getAddress Stored Procedure as the source
+  
+![CopyData-1](https://github.com/ujvalgandhi1/GeocodingUsingPipelines/blob/main/images/CopyData-1.PNG)
+
+For the Sink, create a csv file on your Data Lake/Blob Storage OR you can create another Azure SQL Table
+![CopyData-2](https://github.com/ujvalgandhi1/GeocodingUsingPipelines/blob/main/images/CopyData-2.PNG)
+
 
