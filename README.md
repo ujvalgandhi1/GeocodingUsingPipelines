@@ -15,7 +15,7 @@ The first step is to define the global variables that are needed. By definition,
 ![Global Variables](https://github.com/ujvalgandhi1/GeocodingUsingPipelines/blob/main/images/GlobalVariables.PNG)
 
 The first component is a LookUp Component. By design, this allows you to look up values from any source. I used a csv file (but it can be an actual database table also)
-![Lookup Component Settings] (https://github.com/ujvalgandhi1/GeocodingUsingPipelines/blob/main/images/LookupSourceFiles-Settings.PNG)
+![Lookup Component Settings](https://github.com/ujvalgandhi1/GeocodingUsingPipelines/blob/main/images/LookupSourceFiles-Settings.PNG)
 
 The critical item to note is that the setting for "First Row only" should be unchecked because we want to read the entire file/table
 
@@ -31,4 +31,4 @@ In the first component, make sure you set the Sequential to be checked of. This 
 ![For Each - 2](https://github.com/ujvalgandhi1/GeocodingUsingPipelines/blob/main/images/ForEachSettings2.PNG)
 
 Within activities, we are going to use two activites - One is Web and other is a Stored Procedure
-(https://github.com/ujvalgandhi1/GeocodingUsingPipelines/blob/main/images/ForEachActivities.PNG)
+![ForEach Activities](https://github.com/ujvalgandhi1/GeocodingUsingPipelines/blob/main/images/ForEachActivities.PNG)
