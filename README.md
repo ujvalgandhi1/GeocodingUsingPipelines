@@ -10,3 +10,6 @@ Ended up using a combination of a small Azure SQL Database (to take advantage of
 
 ![High Level](https://github.com/ujvalgandhi1/GeocodingUsingPipelines/blob/main/images/HighLevelOverview.PNG)
 
+The first step is to define the global variables that are needed. By definition, the variables in pipelines are for the entire pipeline and cannot be constrained to a particular scope. I also ended up creating a new variable called confidence because it indicated the quality of the geocoded output. 
+
+![Global Variables](https://github.com/ujvalgandhi1/GeocodingUsingPipelines/blob/main/images/GlobalVariables.PNG)
