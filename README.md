@@ -8,4 +8,5 @@ The requirements are
 Approach
 Ended up using a combination of a small Azure SQL Database (to take advantage of Stored Procedures and keep costs down), web call (to a free geocoding API) and a Copy Activity to hold the final results. Look at the high level overview here
 
-([/images/HighLevelOverview.PNG](https://github.com/ujvalgandhi1/GeocodingUsingPipelines/blob/main/images/HighLevelOverview.PNG))
+![High Level](https://github.com/ujvalgandhi1/GeocodingUsingPipelines/blob/main/images/HighLevelOverview.PNG)
+
