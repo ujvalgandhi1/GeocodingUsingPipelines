@@ -32,3 +32,23 @@ In the first component, make sure you set the Sequential to be checked of. This 
 
 Within activities, we are going to use two activites - One is Web and other is a Stored Procedure
 ![ForEach Activities](https://github.com/ujvalgandhi1/GeocodingUsingPipelines/blob/main/images/ForEachActivities.PNG)
+
+For the Web Activity, follow the first screenshot here to get the GET Method. Rest all can be left as default. Under the URL, use Dynamic Method to open the Pipeline expression builder and you can pass the URL and the query field has to be replaced with the @item().address to pass the address string
+
+![Web-1](https://github.com/ujvalgandhi1/GeocodingUsingPipelines/blob/main/images/Web1.PNG)
+![Web-2](https://github.com/ujvalgandhi1/GeocodingUsingPipelines/blob/main/images/Web2.PNG)
+
+Next drag the Stored Procedure component and drop it on the canvas. Connect the Web and the Stored Procedure component together
+1. Select the Linked Server and point it to the same Azure SQL DB created for the Script component
+2. Select the Stored Procedure (usp_insertAddress) from the drop down. Refer to the Data Assets at https://github.com/ujvalgandhi1/GeocodingUsingPipelines/tree/main/DataAssets for the usp_insertAddress stored procedure
+3. Use the Import to get all the variables. 
+4. Use the screenshot below to map the fields. The fields from the data directly are to be mapped using @item().<name of the field> whereas use the following three values to map the latitude, longitude and confidence because they come from the Web Activity call
+  @concat(activity('Web1').output.results[0].geometry.lat)
+
+@concat(activity('Web1').output.results[0].geometry.lng)
+
+@concat(activity('Web1').output.results[0].confidence)
+
+![StoredProcedure-1](https://github.com/ujvalgandhi1/GeocodingUsingPipelines/blob/main/images/StoredProcedure-1.PNG)
+![StoredProcedure-1](https://github.com/ujvalgandhi1/GeocodingUsingPipelines/blob/main/images/StoredProcedure-1.PNG)
+
